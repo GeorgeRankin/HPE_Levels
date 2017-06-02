@@ -1,9 +1,9 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPE_Levels", "Assembly-CSharp.csproj", "{D216C0B2-CD88-711A-A18B-6CA206295542}"
+# Visual Studio 2008
+
+Project("{DEB1D069-C3D1-C0D1-3546-C642B413D00A}") = "HPE_Levels", "Assembly-CSharp.csproj", "{D216C0B2-CD88-711A-A18B-6CA206295542}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPE_Levels", "Assembly-CSharp-Editor.csproj", "{B41F972B-330E-895E-2DF2-6C6BD95679CF}"
+Project("{DEB1D069-C3D1-C0D1-3546-C642B413D00A}") = "HPE_Levels", "Assembly-CSharp-Editor.csproj", "{B41F972B-330E-895E-2DF2-6C6BD95679CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
