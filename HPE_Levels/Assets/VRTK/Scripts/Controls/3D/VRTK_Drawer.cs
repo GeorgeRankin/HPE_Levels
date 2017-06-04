@@ -7,11 +7,17 @@ namespace VRTK
     /// Transforms a game object into a drawer. The direction can be freely set and also auto-detected with very high reliability.
     /// </summary>
     /// <remarks>
-    /// The script will instantiate the required Rigidbody, Interactable and Joint components automatically in case they do not exist yet. There are situations when it can be very hard to automatically calculate the correct axis for the joint. If this situation is encountered simply add the configurable joint manually and set the axis. All the rest will still be handled by the script.
+    /// The script will instantiate the required Rigidbody, Interactable and Joint components automatically in case they do not exist yet. 
+	/// There are situations when it can be very hard to automatically calculate the correct axis for the joint. If this situation is encountered 
+	/// simply add the configurable joint manually and set the axis. All the rest will still be handled by the script.
     ///
-    /// It will expect two distinct game objects: a body and a handle. These should be independent and not children of each other. The distance to which the drawer can be pulled out will automatically set depending on the length of it. If no body is specified the current object is assumed to be the body.
+    /// It will expect two distinct game objects: a body and a handle. These should be independent and not children of each other. 
+	/// The distance to which the drawer can be pulled out will automatically set depending on the length of it. If no body is specified 
+	/// the current object is assumed to be the body.
     ///
-    /// It is possible to supply a third game object which is the root of the contents inside the drawer. When this is specified the VRTK_InteractableObject components will be automatically deactivated in case the drawer is closed or not yet far enough open. This eliminates the issue that a user could grab an object inside a drawer although it is closed.
+    /// It is possible to supply a third game object which is the root of the contents inside the drawer. When this is specified the 
+	/// VRTK_InteractableObject components will be automatically deactivated in case the drawer is closed or not yet far enough open. 
+	/// This eliminates the issue that a user could grab an object inside a drawer although it is closed.
     /// </remarks>
     /// <example>
     /// `VRTK/Examples/025_Controls_Overview` shows a drawer with contents that can be opened and closed freely and the contents can be removed from the drawer.

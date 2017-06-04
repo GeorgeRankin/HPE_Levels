@@ -4,10 +4,12 @@ namespace VRTK
     using UnityEngine;
 
     /// <summary>
-    /// Manages objects defined as content. When taking out an object from a drawer and closing the drawer this object would otherwise disappear even if outside the drawer.
+    /// Manages objects defined as content. When taking out an object from a drawer and closing the drawer this object would otherwise disappear even 
+	/// if outside the drawer.
     /// </summary>
     /// <remarks>
-    /// The script will use the boundaries of the control to determine if it is in or out and re-parent the object as necessary. It can be put onto individual objects or the parent of multiple objects. Using the latter way all interactable objects under that parent will become managed by the script.
+    /// The script will use the boundaries of the control to determine if it is in or out and re-parent the object as necessary. It can be put onto 
+	/// individual objects or the parent of multiple objects. Using the latter way all interactable objects under that parent will become managed by the script.
     /// </remarks>
     /// <example>
     /// `VRTK/Examples/025_Controls_Overview` has a drawer with a collection of items that adhere to this concept.
