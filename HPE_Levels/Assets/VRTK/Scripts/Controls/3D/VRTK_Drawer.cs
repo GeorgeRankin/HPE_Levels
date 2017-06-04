@@ -185,7 +185,7 @@ namespace VRTK
             return new ControlValueRange()
             {
                 controlMin = 0,
-                controlMax = 100
+                controlMax = 1
             };
         }
 

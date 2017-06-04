@@ -72,7 +72,11 @@ namespace VRTK
         [Tooltip("A specified VRTK_PolicyList to use to determine which interactable objects will be snapped to the snap drop zone on release.")]
         public VRTK_PolicyList validObjectListPolicy;
         [Tooltip("If this is checked then the drop zone highlight section will be displayed in the scene editor window.")]
-        public bool displayDropZoneInEditor = true;
+        public bool displayDropZoneInEditor = true; 
+		[Tooltip("Has the key been placed into the snapzone")]
+		public bool key_placed = false;
+		[Tooltip("The drawer in question")]
+		public GameObject Drawer;
 
         /// <summary>
         /// Emitted when a valid interactable object enters the snap drop zone trigger collider.
@@ -203,6 +207,7 @@ namespace VRTK
 
         protected virtual void Awake()
         {
+			Drawer = GameObject.Find("Drawer_Unit");
             if (Application.isPlaying)
             {
                 InitaliseHighlightObject();
@@ -403,6 +408,16 @@ namespace VRTK
                         StopCoroutine(transitionInPlace);
                     }
 
+					if (collider.gameObject.tag == "Saucers") {
+						key_placed = true;
+						Drawer.GetComponent<ConfigurableJoint>();
+						ConfigurableJoint configurableJointComp = Drawer.GetComponent<ConfigurableJoint> ();
+						SoftJointLimit softJointLimit = new SoftJointLimit ();
+						softJointLimit.limit = 0.3f;
+						configurableJointComp.linearLimit = softJointLimit; 
+						Debug.LogWarning ("Key has been placed");
+					}
+
                     isSnapped = true;
                     currentSnappedObject = ioCheck.gameObject;
 
@@ -415,6 +430,8 @@ namespace VRTK
             //Force reset isSnapped if the item is grabbed but isSnapped is still true
             isSnapped = (isSnapped && ioCheck && ioCheck.IsGrabbed() ? false : isSnapped);
         }
+
+
 
         private void UnsnapObject()
         {

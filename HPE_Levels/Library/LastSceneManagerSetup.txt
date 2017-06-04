@@ -1,4 +1,4 @@
 sceneSetups:
-- path: D:/Downloadz/It-s-A-Moray/ThatIsAMoray/Assets/VRTK/Examples/NoBomb_ControlRoom.unity
+- path: Assets/HPE_Levels/Scenes/HPE_Base_Level.unity
   isLoaded: 1
   isActive: 1
