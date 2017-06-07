@@ -11,7 +11,7 @@
         public override void StartUsing(GameObject usingObject)
         {
             base.StartUsing(usingObject);
-            FireBullet();
+            //FireBullet();
         }
 
         protected void Start()
@@ -20,13 +20,13 @@
             bullet.SetActive(false);
         }
 
-        private void FireBullet()
+        /*private void FireBullet()
         {
             GameObject bulletClone = Instantiate(bullet, bullet.transform.position, bullet.transform.rotation) as GameObject;
             bulletClone.SetActive(true);
             Rigidbody rb = bulletClone.GetComponent<Rigidbody>();
             rb.AddForce(-bullet.transform.forward * bulletSpeed);
             Destroy(bulletClone, bulletLife);
-        }
+        }*/
     }
 }

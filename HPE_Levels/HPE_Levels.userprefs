@@ -1,13 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\VRTK\Prefabs\Resources\Scripts\VRTK_SnapDropZone.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\VRTK\Scripts\Interactions\VRTK_InteractableObject.cs">
     <Files>
-      <File FileName="Assets\VRTK\Prefabs\Resources\Scripts\VRTK_SnapDropZone.cs" Line="416" Column="32" />
-      <File FileName="Assets\VRTK\Scripts\Controls\3D\VRTK_Drawer.cs" Line="188" Column="31" />
+      <File FileName="Assets\VRTK\Scripts\Interactions\VRTK_InteractableObject.cs" Line="661" Column="13" />
+      <File FileName="Assets\VRTK\Scripts\Pointers\VRTK_Pointer.cs" Line="214" Column="1" />
+      <File FileName="Assets\VRTK\Scripts\Pointers\PointerRenderers\VRTK_BasePointerRenderer.cs" Line="273" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\HPE_Levels\HPE_Levels\Assets\VRTK\Scripts\Interactions\VRTK_InteractableObject.cs" line="112" column="34" />
+      <Breakpoint file="D:\HPE_Levels\HPE_Levels\Assets\VRTK\Scripts\Interactions\VRTK_InteractableObject.cs" line="111" column="1" />
+      <Breakpoint file="D:\HPE_Levels\HPE_Levels\Assets\VRTK\Scripts\Interactions\VRTK_InteractableObject.cs" line="320" column="35" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

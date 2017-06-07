@@ -415,7 +415,6 @@ namespace VRTK
 						SoftJointLimit softJointLimit = new SoftJointLimit ();
 						softJointLimit.limit = 0.3f;
 						configurableJointComp.linearLimit = softJointLimit; 
-						Debug.LogWarning ("Key has been placed");
 					}
 
                     isSnapped = true;

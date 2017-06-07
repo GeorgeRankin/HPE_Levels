@@ -108,6 +108,10 @@ namespace VRTK
         public VRTK_ControllerEvents.ButtonAlias useOverrideButton = VRTK_ControllerEvents.ButtonAlias.Undefined;
         [Tooltip("Determines which controller can initiate a use action.")]
         public AllowedController allowedUseControllers = AllowedController.Both;
+		[Tooltip("The gun in question.")]
+		public GameObject TeleporterGun;
+		public GameObject LeftController;
+		public GameObject RightController;
 
         /// <summary>
         /// Emitted when another object touches the current object.
@@ -200,6 +204,7 @@ namespace VRTK
 
         public virtual void OnInteractableObjectGrabbed(InteractableObjectEventArgs e)
         {
+//			
             if (InteractableObjectGrabbed != null)
             {
                 InteractableObjectGrabbed(this, e);
@@ -311,7 +316,10 @@ namespace VRTK
             ToggleEnableState(true);
             if (!IsGrabbed() || IsSwappable())
             {
-                PrimaryControllerGrab(currentGrabbingObject);
+				PrimaryControllerGrab(currentGrabbingObject);
+				if (gameObject.tag == "Gun") {
+					Debug.LogWarning ("The Teleporter gun has been picked up");
+				}
             }
             else
             {
@@ -646,6 +654,11 @@ namespace VRTK
             {
                 enabled = false;
             }
+			TeleporterGun = GameObject.FindGameObjectWithTag ("Gun");
+			RightController = GameObject.Find ("RightController");
+			//Enable the two teleporter scripts
+			LeftController = GameObject.Find ("LeftController");
+			//Enable the two teleporter scripts
         }
 
         protected virtual void OnEnable()

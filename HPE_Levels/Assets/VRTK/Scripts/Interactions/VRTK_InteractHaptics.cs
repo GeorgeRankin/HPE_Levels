@@ -55,6 +55,7 @@ namespace VRTK
         /// <param name="controllerActions">The controller to activate the haptic feedback on.</param>
         public virtual void HapticsOnGrab(VRTK_ControllerActions controllerActions)
         {
+//			
             if (strengthOnGrab > 0 && durationOnGrab > 0f)
             {
                 TriggerHapticPulse(controllerActions, strengthOnGrab, durationOnGrab, intervalOnGrab);
